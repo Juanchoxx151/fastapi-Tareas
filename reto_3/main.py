@@ -16,7 +16,7 @@
 
 from pydantic import BaseModel, Field
 from typing import Annotated
-from fastapi import FastAPI, HTTPException, Query, Path
+from fastapi import FastAPI, HTTPException, Path
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
@@ -29,7 +29,7 @@ app.add_middleware(
         "http://127.0.0.1:8000"
 		"https://juanchoxx151.github.io/front",
     ],
-	allow_crentials=True,
+	allow_credentials=True,
 	allow_methods=["*"],
 	allow_headers=["*"],
 )
